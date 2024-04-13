@@ -11,8 +11,8 @@ const mongooseURL=process.env.mongooseURL;
 //     }
 // )
 mongoose.connect(mongooseURL,{
-    useNewUrlParser: true,
-  useUnifiedTopology: true,
+//     useNewUrlParser: true,
+//   useUnifiedTopology: true,
 
 });
 const db=mongoose.connection;
