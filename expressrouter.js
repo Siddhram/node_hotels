@@ -42,6 +42,7 @@ console.log("err : "+err);
 res.status(500).json({error:"finished"});
   }
  })
+
  routs.post('/',async function(req,res){
   try{
       const data=req.body;
