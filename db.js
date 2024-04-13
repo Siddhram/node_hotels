@@ -1,5 +1,9 @@
 const mongoose=require('mongoose');
-const mongooseURL='mongodb://localhost:27017/hotels';
+require('dotenv').config();
+// const mongooseURL='mongodb://localhost:27017/hotels';
+const mongooseURL=process.env.mongooseURL;
+
+//mongodb+srv://siddharamsutar23:4KTfES7jZwMOq7QG@cluster0.ddnr1k9.mongodb.net/
 // mongoose.connect(
 //     mongooseURL,{
 //         useNewUrlparser:true,
@@ -7,8 +11,8 @@ const mongooseURL='mongodb://localhost:27017/hotels';
 //     }
 // )
 mongoose.connect(mongooseURL,{
-    // useNewUrlParser: true,
-//   useUnifiedTopology: true,
+    useNewUrlParser: true,
+  useUnifiedTopology: true,
 
 });
 const db=mongoose.connection;
