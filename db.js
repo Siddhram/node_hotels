@@ -10,11 +10,11 @@ const mongooseURL='mongodb://localhost:27017/hotels';
 
 //     }
 // )
-mongoose.connect(mongooseURL,{
-    useNewUrlParser: true,
-  useUnifiedTopology: true,
-
+mongoose.connect(mongooseURL, {
+  //  useNewUrlParser: true,
+    //useUnifiedTopology: true,
 });
+
 const db=mongoose.connection;
 db.on('connected',()=>{
     console.log("db is connected");
